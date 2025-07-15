@@ -1,6 +1,6 @@
 // Same API client as consumer app
-const API_BASE_URL = 'https://c33m2h-3001.csb.app/api';
-const WS_URL = 'wss://c33m2h-3001.csb.app';
+const API_BASE_URL = "https://dhlxq7-3005.csb.app/api";
+const WS_URL = "wss://dhlxq7-3005.csb.app";
 
 export interface TimeSlot {
   id: string;
