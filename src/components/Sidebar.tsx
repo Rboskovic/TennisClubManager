@@ -1,9 +1,10 @@
-import { Home, Calendar, DollarSign, BarChart, Settings, LogOut } from 'lucide-react';
+import { Home, Calendar, DollarSign, BarChart, Settings, LogOut, MessageSquare } from 'lucide-react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 const navItems = [
   { id: 'dashboard', label: 'Pregled', icon: Home, path: '/' },
   { id: 'courts', label: 'Upravljanje Terenima', icon: Calendar, path: '/courts' },
+  { id: 'chat', label: 'Chat', icon: MessageSquare, path: '/chat' },
   { id: 'pricing', label: 'Cjenovnik', icon: DollarSign, path: '/pricing' },
   { id: 'analytics', label: 'Analitika', icon: BarChart, path: '/analytics' },
   { id: 'settings', label: 'Postavke', icon: Settings, path: '/settings' },
@@ -47,6 +48,11 @@ export default function Sidebar() {
                 >
                   <Icon className="w-5 h-5" />
                   <span className="font-medium">{item.label}</span>
+                  {item.id === 'chat' && (
+                    <span className="ml-auto bg-red-600 text-white text-xs px-2 py-1 rounded-full">
+                      BETA
+                    </span>
+                  )}
                 </button>
               </li>
             );
